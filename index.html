@@ -6,37 +6,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mantenimiento de Unidades de Granel - Formato</title>    
     <style>
-         :root {
+        :root {
             font-family: Arial, Helvetica, sans-serif;
             color: #111;
+            font-size: 12px;
         }
         
         body {
             margin: 0;
-            padding: 15px;
+            padding: 8px;
             background: #f6f7f9;
         }
         
         .page {
             page-break-inside: avoid;
             max-width: 900px;
-            margin: 8px auto;
+            margin: 4px auto;
             background: white;
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 12px;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
         }
-        
+            
         header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
         
         header h1 {
-            font-size: 18px;
+            font-size: 16px;
             margin: 0;
+            line-height: 1.2;
         }
         
         .meta {
@@ -44,92 +46,96 @@
         }
         
         .field {
-            margin: 6px 0;
+            margin: 4px 0;
         }
         
         label {
             display: block;
-            font-size: 13px;
-            margin-bottom: 4px;
+            font-size: 11px;
+            margin-bottom: 2px;
         }
         
         input[type=text] {
             width: 100%;
-            padding: 6px;
+            padding: 4px;
             border: 1px solid #bbb;
-            border-radius: 4px;
-            font-size: 14px;
+            border-radius: 3px;
+            font-size: 12px;
+            height: 24px;
         }
         
         .sketches {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 6px;
+            margin-top: 10px;
         }
         
         .sketch {
             background: #fcfdff;
-            padding: 10px;
+            padding: 5px;
             border: 1px solid #e1e6ef;
-            border-radius: 6px;
+            border-radius: 4px;
+            margin-bottom: 2px;
         }
         
         .sketch h3 {
-            margin: 0 0 6px 0;
-            font-size: 14px;
+            margin: 0 0 4px 0;
+            font-size: 12px;
+            line-height: 1.2;
         }
-        /* SVG sizing */
         
+        /* SVG sizing - MÁS PEQUEÑOS */
         svg {
             width: 100%;
-            height: 180px;
+            height: 95px;
         }
         
-        .full {
+        .full-width {
             grid-column: 1 / -1;
         }
         
         .controls {
-            margin-top: 15px;
+            margin-top: 10px;
             display: flex;
-            gap: 10px;
+            gap: 6px;
         }
         
         button {
-            padding: 8px 12px;
-            border-radius: 6px;
+            padding: 5px 8px;
+            border-radius: 4px;
             border: 0;
             background: #1866d1;
             color: white;
             font-weight: 600;
             cursor: pointer;
+            font-size: 11px;
         }
         
         button.secondary {
             background: #6b7280;
         }
-        /* Footer section */
         
+        /* Footer section */
         .footer-section {
-            margin-top: 15px;
-            padding-top: 10px;
+            margin-top: 10px;
+            padding-top: 6px;
             border-top: 1px solid #e1e6ef;
         }
         
         .footer-section h2 {
-            font-size: 16px;
-            margin-bottom: 8px;
+            font-size: 14px;
+            margin-bottom: 6px;
         }
         
         .comment-box {
             width: 95%;
-            height: 60px;
-            padding: 8px;
+            height: 40px;
+            padding: 5px;
             border: 1px solid #bbb;
-            border-radius: 4px;
+            border-radius: 3px;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 12px;
             resize: vertical;
         }
         
@@ -144,77 +150,183 @@
         }
         
         .signature-block p {
-            margin: 0 0 5px 0;
-            font-size: 13px;
+            margin: 0 0 3px 0;
+            font-size: 11px;
         }
         
         .signature-line {
             border-bottom: 1px solid #111;
-            height: 25px;
-            margin-bottom: 5px;
+            height: 20px;
+            margin-bottom: 3px;
         }
+        
         /* Small notes */
-        
         .note {
-            font-size: 12px;
+            font-size: 10px;
             color: #555;
-            margin-top: 6px;
+            margin-top: 3px;
         }
-        /* Print rules */
         
+        /* Print rules */
         @media print {
             body {
                 background: white;
                 padding: 0;
+                margin: 0;
             }
             .page {
                 box-shadow: none;
                 margin: 0;
                 border-radius: 0;
-                padding: 15px;
+                padding: 10px;
+                max-width: 100%;
             }
             .controls,
             button {
                 display: none;
             }
             svg {
-                height: 140px;
-            }
-            .footer-section {
-                margin-top: 10px;
-            }
-            .comment-box {
-                height: 50px;
-            }
-        }
-        /* Compact styles for printing */
-        
-        @media print {
-            @page {
-                margin: 0.5cm;
-            }
-            header {
-                margin-bottom: 5px;
-            }
-            .field {
-                margin: 4px 0;
-            }
-            .sketches {
-                gap: 10px;
-                margin-top: 10px;
-            }
-            .sketch {
-                padding: 8px;
+                height: 85px;
             }
             .footer-section {
                 margin-top: 8px;
             }
+            .comment-box {
+                height: 35px;
+            }
+        }
+        
+        /* Compact styles for printing */
+        @media print {
+            @page {
+                margin: 0.3cm;
+                size: A4;
+            }
+            header {
+                margin-bottom: 4px;
+            }
+            .field {
+                margin: 3px 0;
+            }
+            .sketches {
+                gap: 5px;
+                margin-top: 8px;
+            }
+            .sketch {
+                padding: 4px;
+            }
+            .footer-section {
+                margin-top: 6px;
+            }
         }
         
         .date-info {
-            font-size: 11px;
+            font-size: 10px;
             color: #666;
+            margin-top: 2px;
+        }
+        
+        /* estilos para las casillas de revisión - MÁS COMPACTAS */
+        .campo {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin:4px 0;
+            font-size: 11px;
+        }
+        
+        .campo input[type="text"]{
+            width: 140px;
+            padding: 3px;
+            border-radius: 3px;
+            border: 1px solid #bbb;
+            font-size: 11px;
+            height: 20px;
+        }
+        
+        .campo input[type="checkbox"] {
+            transform: scale(0.9);
+        }
+        
+        /* Sección de revisión más compacta */
+        .seccion {
+            margin-top: 10px !important;
+            padding: 6px !important;
+            border: 1px solid #e1e6ef !important;
+            border-radius: 4px !important;
+        }
+        
+        /* Ajustar tamaños en SVG para que sean más pequeños */
+        svg text {
+            font-size: 8px !important;
+        }
+        
+        svg rect, svg line, svg circle {
+            stroke-width: 1 !important;
+        }
+        
+        /* Estilos para el sketch combinado más pequeño */
+        .combined-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-top: 2px;
+        }
+        
+        .combined-item h4 {
+            margin: 0 0 3px 0;
+            font-size: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        /* SVG aún más pequeños para combinados */
+        .combined-svg {
+            width: 100%;
+            height: 75px;
+        }
+        
+        .sketch-small h3 {
+            font-size: 11px;
+        }
+        
+        /* Contenedor para PLC + Impresora */
+        .plc-printer-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 8px;
+            margin-top: 2px;
+        }
+        
+        .plc-item, .printer-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .printer-item h4 {
+            margin: 0 0 3px 0;
+            font-size: 11px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        /* SVG más pequeño para impresora */
+        .printer-svg {
+            width: 100%;
+            height: 80px;
+        }
+        
+        /* Estilos para el medidor de fluidos */
+        .fluid-meter-container {
             margin-top: 3px;
+            text-align: center;
+        }
+        
+        .fluid-meter-container h5 {
+            margin: 0 0 2px 0;
+            font-size: 9px;
+            font-weight: 600;
+            color: #1e40af;
         }
     </style>
 </head>
@@ -226,13 +338,13 @@
                 <h1>Mantenimiento de unidades de Granel</h1>
                 <p class="note"></p>
             </div>
-            <div style="text-align:right">
+            <div style="text-align:right; font-size: 11px;">
                 <strong>Fecha de impresión:</strong>
-                <div id="printDate" style="font-size:13px;margin-top:6px"></div>
+                <div id="printDate" style="font-size:11px;margin-top:3px"></div>
             </div>
         </header>
 
-        <section style="margin-top:10px">
+        <section style="margin-top:8px">
             <div class="field">
                 <label>Fecha: <span style="color:#111;font-weight:600"></span></label>
                 <input type="text" id="fecha" placeholder="_____________________________">
@@ -249,156 +361,245 @@
         </section>
 
         <section class="sketches">
-            <!-- PLC 2080 Allen-Bradley (croquis simple) -->
-            <div class="sketch">
-                <h3>Croquis: PLC 2080 (Allen-Bradley) - vista general</h3>
-                <svg viewBox="0 0 800 400" role="img" aria-label="Croquis PLC 2080">
-          <!-- PLC body -->
-          <rect x="40" y="30" width="320" height="340" rx="8" ry="8" fill="#f4f7fb" stroke="#1f2937" stroke-width="2"/>
-          <text x="200" y="60" font-size="20" text-anchor="middle">PLC 2080</text>
-          <!-- CPU slot -->
-          <rect x="60" y="80" width="280" height="80" fill="#ffffff" stroke="#374151"/>
-          <text x="200" y="125" font-size="12" text-anchor="middle">CPU / Módulo principal</text>
-          <!-- I/O left -->
-          <g>
-            <text x="110" y="200" font-size="12" text-anchor="middle">I/O Digital</text>
-            <!-- terminals -->
-            <g transform="translate(80,210)">
-              <rect x="0" y="0" width="40" height="140" fill="#eef2ff" stroke="#334155"/>
-              <g fill="#000" font-size="11">
-                <text x="20" y="20" text-anchor="middle">0</text>
-                <text x="20" y="40" text-anchor="middle">1</text>
-                <text x="20" y="60" text-anchor="middle">2</text>
-                <text x="20" y="80" text-anchor="middle">3</text>
-                <text x="20" y="100" text-anchor="middle">4</text>
-                <text x="20" y="120" text-anchor="middle">5</text>
-              </g>
-            </g>
-          </g>
-          <!-- Power connector right -->
-          <g>
-            <text x="500" y="200" font-size="12">Fuente y alimentación</text>
-            <rect x="520" y="210" width="200" height="110" rx="6" fill="#fff7ed" stroke="#92400e"/>
-            <text x="620" y="260" font-size="12" text-anchor="middle">24 VDC</text>
-          </g>
-          <!-- Ethernet / programming port -->
-          <rect x="60" y="260" width="120" height="36" fill="#eaf8ff" stroke="#075985"/>
-          <text x="120" y="284" font-size="11" text-anchor="middle">Ethernet / Prog</text>
-          <!-- labels -->
-          <line x1="360" y1="90" x2="520" y2="90" stroke="#94a3b8" stroke-dasharray="4"/>
-        </svg>
+            <!-- PLC + Medidor de fluidos e Impresora COMBINADOS -->
+            <div class="sketch full-width">
+                <h3>PLC 2080 + Medidor de fluidos e Impresora</h3>
+                <div class="plc-printer-container">
+                    <div class="plc-item">
+                        <h4>PLC 2080 + Medidor de fluidos</h4>
+                        <svg viewBox="0 0 600 120" role="img" aria-label="PLC 2080 + Medidor de fluidos">
+                            <!-- PLC compacto -->
+                            <rect x="20" y="20" width="120" height="80" rx="3" ry="3" fill="#f4f7fb" stroke="#1f2937" stroke-width="1"/>
+                            <text x="80" y="35" font-size="8" text-anchor="middle">PLC 2080</text>
+                            <rect x="30" y="42" width="100" height="25" fill="#ffffff" stroke="#374151"/>
+                            <text x="80" y="55" font-size="6" text-anchor="middle">CPU</text>
+                            <!-- conjunto de E/S representativo -->
+                            <g transform="translate(35,70)">
+                                <rect x="0" y="0" width="20" height="40" fill="#eef2ff" stroke="#334155"/>
+                                <text x="10" y="7" font-size="5" text-anchor="middle">I0</text>
+                                <text x="10" y="15" font-size="5" text-anchor="middle">I1</text>
+                                <text x="10" y="23" font-size="5" text-anchor="middle">I2</text>
+                                <text x="10" y="31" font-size="5" text-anchor="middle">I3</text>
+                            </g>
+
+                            <!-- Medidor de fluidos -->
+                            <rect x="150" y="20" width="100" height="80" rx="3" ry="3" fill="#f0f9ff" stroke="#0369a1" stroke-width="1"/>
+                            <text x="200" y="35" font-size="8" text-anchor="middle">Medidor</text>
+                            <text x="200" y="45" font-size="6" text-anchor="middle">Fluidos</text>
+                            
+                            <!-- Símbolo de medidor de flujo -->
+                            <g transform="translate(170,55)">
+                                <!-- Cuerpo del medidor -->
+                                <rect x="0" y="0" width="20" height="30" fill="#e0f2fe" stroke="#0369a1"/>
+                                
+                                <!-- Indicador de flujo -->
+                                <line x1="10" y1="5" x2="10" y2="25" stroke="#0369a1" stroke-width="1.5"/>
+                                
+                                <!-- Flechas de flujo -->
+                                <polygon points="5,15 10,10 10,20" fill="#0369a1"/>
+                                <polygon points="15,15 10,10 10,20" fill="#0369a1" transform="rotate(180 10 15)"/>
+                                
+                                <!-- Pantalla/display -->
+                                <rect x="25" y="5" width="20" height="20" rx="2" fill="#fff" stroke="#0369a1"/>
+                                <text x="35" y="17" font-size="5" text-anchor="middle">LCD</text>
+                            </g>
+                            
+                            <!-- Conexión al PLC -->
+                            <defs>
+                                <marker id="arrowFlow" viewBox="0 0 5 5" refX="5" refY="2.5" markerWidth="3" markerHeight="3" orient="auto">
+                                <path d="M0,0 L5,2.5 L0,5 z" fill="#0369a1"/>
+                                </marker>
+                            </defs>
+                            <line x1="140" y1="60" x2="150" y2="60" stroke="#0369a1" stroke-width="1" marker-end="url(#arrowFlow)"/>
+                            
+                            <!-- Módulo Modbus compacto -->
+                            <rect x="260" y="20" width="100" height="80" rx="3" ry="3" fill="#fff7ed" stroke="#92400e" stroke-width="1"/>
+                            <text x="310" y="35" font-size="8" text-anchor="middle">Modbus</text>
+                            <rect x="270" y="42" width="80" height="25" fill="#ffffff" stroke="#92400e"/>
+                            <text x="310" y="55" font-size="6" text-anchor="middle">RS-485</text>
+                            <!-- terminales RS485 -->
+                            <g transform="translate(280,70)">
+                                <circle cx="6" cy="6" r="2.5" stroke="#333" fill="none"></circle>
+                                <circle cx="16" cy="6" r="2.5" stroke="#333" fill="none"></circle>
+                                <text x="11" y="18" font-size="5" text-anchor="middle">A/B</text>
+                            </g>
+
+                            <!-- Flecha de conexión PLC -> Modbus -->
+                            <defs>
+                                <marker id="arrowSmall" viewBox="0 0 5 5" refX="5" refY="2.5" markerWidth="3" markerHeight="3" orient="auto">
+                                <path d="M0,0 L5,2.5 L0,5 z" fill="#374151"/>
+                                </marker>
+                            </defs>
+                            <line x1="250" y1="60" x2="260" y2="60" stroke="#374151" stroke-width="1" marker-end="url(#arrowSmall)"/>
+
+                            <!-- Fuente 24 V -->
+                            <rect x="370" y="20" width="60" height="40" rx="3" fill="#fff7ed" stroke="#92400e"/>
+                            <text x="400" y="38" font-size="6" text-anchor="middle">24 VDC</text>
+                        </svg>
+                        <div class="fluid-meter-container">
+                            <h5>Medidor másico/volumétrico</h5>
+                            <div style="font-size: 8px; color: #444;">
+                                Medición de flujo: 4-20mA / Modbus
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="printer-item">
+                        <h4>Impresora</h4>
+                        <svg class="printer-svg" viewBox="0 0 300 100" role="img" aria-label="Impresora croquis">
+                            <g transform="translate(10,20)">
+                                <!-- Cabezal de impresión -->
+                                <rect x="0" y="10" width="180" height="50" rx="4" fill="#f3f4f6" stroke="#111"/>
+                                <text x="90" y="28" font-size="7" text-anchor="middle">Cabezal</text>
+                                <text x="90" y="40" font-size="6" text-anchor="middle">impresión</text>
+                                
+                                <!-- cable conexion ethernet -->
+                                <line x1="180" y1="35" x2="250" y2="35" stroke="#222" stroke-width="1.5"/>
+                                <text x="215" y="30" font-size="5.5" text-anchor="middle">Ethernet</text>
+                                
+                                <!-- Conector ethernet -->
+                                <rect x="250" y="25" width="30" height="20" rx="2" fill="#fff" stroke="#111"/>
+                                <text x="265" y="37" font-size="5" text-anchor="middle">RJ45</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
 
-            <!-- Baterías en serie -->
-            <div class="sketch">
-                <h3>Croquis: Baterías en serie</h3>
-                <svg viewBox="0 0 800 400" role="img" aria-label="Baterias en serie croquis">
-          <text x="100" y="30" font-size="14">Conexión en serie (suma de voltajes)</text>
-          <!-- three cells -->
-          <g transform="translate(40,60)">
-            <!-- cell 1 -->
-            <g>
-              <rect x="0" y="10" width="60" height="40" fill="#fff" stroke="#222"/>
-              <line x1="30" y1="0" x2="30" y2="10" stroke="#222" stroke-width="3"/>
-              <text x="30" y="35" font-size="12" text-anchor="middle">+</text>
-              <text x="30" y="53" font-size="12" text-anchor="middle">-</text>
-            </g>
-            <!-- connector -->
-            <line x1="60" y1="30" x2="120" y2="30" stroke="#222" stroke-width="2"/>
-            <!-- cell 2 -->
-            <g transform="translate(120,0)">
-              <rect x="0" y="10" width="60" height="40" fill="#fff" stroke="#222"/>
-              <line x1="30" y1="0" x2="30" y2="10" stroke="#222" stroke-width="3"/>
-              <text x="30" y="35" font-size="12" text-anchor="middle">+</text>
-              <text x="30" y="53" font-size="12" text-anchor="middle">-</text>
-            </g>
-            <line x1="180" y1="30" x2="240" y2="30" stroke="#222" stroke-width="2"/>
-            <!-- cell 3 -->
-            <g transform="translate(240,0)">
-              <rect x="0" y="10" width="60" height="40" fill="#fff" stroke="#222"/>
-              <line x1="30" y1="0" x2="30" y2="10" stroke="#222" stroke-width="3"/>
-              <text x="30" y="35" font-size="12" text-anchor="middle">+</text>
-              <text x="30" y="53" font-size="12" text-anchor="middle">-</text>
-            </g>
-            <!-- overall terminals -->
-            <text x="320" y="35" font-size="12">V total = V1 + V2 + V3</text>
-            <line x1="0" y1="60" x2="300" y2="60" stroke="#94a3b8" stroke-dasharray="4"/>
-          </g>
-        </svg>
+            <!-- Baterías en serie con convertidor (IZQUIERDA) -->
+            <div class="sketch sketch-small">
+                <h3>Baterías en serie + Convertidor</h3>
+                <svg viewBox="0 0 500 120" role="img" aria-label="Baterias en serie croquis con convertidor">
+                    <g transform="translate(15,25)">
+                        <!-- cell 1 -->
+                        <g>
+                            <rect x="0" y="10" width="30" height="22" fill="#fff" stroke="#222"/>
+                            <line x1="15" y1="0" x2="15" y2="10" stroke="#222" stroke-width="1.2"/>
+                            <text x="15" y="18" font-size="6" text-anchor="middle">+</text>
+                        </g>
+                        <!-- connector -->
+                        <line x1="30" y1="21" x2="55" y2="21" stroke="#222" stroke-width="1"/>
+                        <!-- cell 2 -->
+                        <g transform="translate(55,0)">
+                            <rect x="0" y="10" width="30" height="22" fill="#fff" stroke="#222"/>
+                            <line x1="15" y1="0" x2="15" y2="10" stroke="#222" stroke-width="1.2"/>
+                            <text x="15" y="18" font-size="6" text-anchor="middle">+</text>
+                        </g>
+                        <line x1="85" y1="21" x2="110" y2="21" stroke="#222" stroke-width="1"/>
+                        <!-- cell 3 -->
+                        <g transform="translate(110,0)">
+                            <rect x="0" y="10" width="30" height="22" fill="#fff" stroke="#222"/>
+                            <line x1="15" y1="0" x2="15" y2="10" stroke="#222" stroke-width="1.2"/>
+                            <text x="15" y="18" font-size="6" text-anchor="middle">+</text>
+                        </g>
+                        
+                        <!-- Salida de baterías -->
+                        <line x1="140" y1="21" x2="160" y2="21" stroke="#222" stroke-width="1.2"/>
+                        <text x="150" y="15" font-size="5" text-anchor="middle">24V</text>
+                        
+                        <!-- Convertidor 24V a 24V -->
+                        <rect x="165" y="5" width="50" height="32" rx="3" fill="#e6f3ff" stroke="#1e40af" stroke-width="1"/>
+                        <text x="190" y="18" font-size="6" text-anchor="middle">Conv.</text>
+                        <text x="190" y="27" font-size="5.5" text-anchor="middle">24V→24V</text>
+                        
+                        <!-- Entrada y salida del convertidor -->
+                        <text x="178" y="3" font-size="4.5" text-anchor="middle">IN</text>
+                        <text x="202" y="3" font-size="4.5" text-anchor="middle">OUT</text>
+                        
+                        <!-- Flecha de entrada al convertidor -->
+                        <line x1="160" y1="21" x2="165" y2="21" stroke="#1e40af" stroke-width="1"/>
+                        
+                        <!-- Salida del convertidor -->
+                        <line x1="215" y1="21" x2="235" y2="21" stroke="#1e40af" stroke-width="1.2"/>
+                        <text x="225" y="15" font-size="5" text-anchor="middle">24V</text>
+                        <text x="225" y="28" font-size="4.5" text-anchor="middle">estabilizado</text>
+                    </g>
+                </svg>
             </div>
 
-            <!-- Porta fusibles -->
-            <div class="sketch">
-                <h3>Croquis: Porta-fusibles (Fusible y soporte)</h3>
-                <svg viewBox="0 0 800 400" role="img" aria-label="Porta fusibles croquis">
-          <text x="120" y="30" font-size="14">Porta-fusibles: vista lateral</text>
-          <g transform="translate(40,60)">
-            <rect x="0" y="30" width="120" height="40" rx="6" fill="#fff" stroke="#333"/>
-            <text x="60" y="55" font-size="12" text-anchor="middle">Fusible</text>
-            <!-- contactos -->
-            <line x1="130" y1="50" x2="240" y2="50" stroke="#222" stroke-width="3"/>
-            <rect x="240" y="30" width="120" height="40" rx="6" fill="#fff" stroke="#333"/>
-            <text x="300" y="55" font-size="12" text-anchor="middle">Soporte / Terminal</text>
-            <text x="60" y="10" font-size="12">Entrada</text>
-            <text x="300" y="10" font-size="12">Salida</text>
-          </g>
-        </svg>
-            </div>
-
-            <!-- Relevadores -->
-            <div class="sketch">
-                <h3>Croquis: Relevador (bobina + contactos)</h3>
-                <svg viewBox="0 0 800 400" role="img" aria-label="Relevador croquis">
-          <text x="120" y="30" font-size="14">Relevador: bobina y contactos</text>
-          <g transform="translate(40,60)">
-            <!-- coil -->
-            <rect x="0" y="30" width="120" height="100" fill="#fff" stroke="#2d3748" rx="6"/>
-            <text x="60" y="60" font-size="12" text-anchor="middle">Bobina</text>
-            <path d="M20 90 q20 -30 80 0" fill="none" stroke="#111" stroke-width="3"/>
-            <text x="60" y="140" font-size="12" text-anchor="middle">A: 24 VDC (ej.)</text>
-            <!-- contacts -->
-            <rect x="160" y="40" width="160" height="40" fill="#fff" stroke="#111"/>
-            <text x="240" y="65" font-size="12" text-anchor="middle">Contacto NO</text>
-            <line x1="320" y1="90" x2="320" y2="140" stroke="#94a3b8" stroke-dasharray="4"/>
-            <rect x="160" y="120" width="160" height="40" fill="#fff" stroke="#111"/>
-            <text x="240" y="145" font-size="12" text-anchor="middle">Contacto NC</text>
-          </g>
-        </svg>
-            </div>
-
-            <!-- Impresora (croquis simple) full width -->
-            <div class="sketch full">
-                <h3>Croquis: Impresora (mecanismo básico)</h3>
-                <svg viewBox="0 0 1000 300" role="img" aria-label="Impresora croquis">
-          <g transform="translate(10,10)">
-            <rect x="10" y="10" width="220" height="140" rx="8" fill="#fff" stroke="#111"/>
-            <text x="120" y="40" font-size="12" text-anchor="middle">Bandeja de papel</text>
-            <rect x="260" y="10" width="500" height="140" rx="8" fill="#f3f4f6" stroke="#111"/>
-            <text x="510" y="40" font-size="12" text-anchor="middle">Mecanismo de impresión / Cabezal</text>
-            <!-- cable conexion -->
-            <line x1="780" y1="80" x2="920" y2="80" stroke="#222" stroke-width="3"/>
-            <text x="850" y="70" font-size="12">Conexión de datos / USB / Ethernet</text>
-            <!-- boton -->
-            <rect x="50" y="110" width="60" height="24" rx="4" fill="#e5e7eb" stroke="#374151"/>
-            <text x="80" y="127" font-size="11" text-anchor="middle">Power</text>
-          </g>
-        </svg>
+            <!-- Porta-fusibles y Relevador COMBINADOS (DERECHA) -->
+            <div class="sketch sketch-small">
+                <h3>Porta-fusibles y Relevador</h3>
+                <div class="combined-container">
+                    <div class="combined-item">
+                        <h4>Porta-fusibles</h4>
+                        <svg class="combined-svg" viewBox="0 0 250 80" role="img" aria-label="Porta fusibles croquis">
+                            <g transform="translate(15,15)">
+                                <rect x="0" y="15" width="60" height="25" rx="2" fill="#fff" stroke="#333"/>
+                                <text x="30" y="28" font-size="6" text-anchor="middle">Fusible</text>
+                                <!-- contactos -->
+                                <line x1="60" y1="27" x2="100" y2="27" stroke="#222" stroke-width="1.2"/>
+                                <rect x="100" y="15" width="60" height="25" rx="2" fill="#fff" stroke="#333"/>
+                                <text x="130" y="28" font-size="6" text-anchor="middle">Soporte</text>
+                                <text x="30" y="12" font-size="5" text-anchor="middle">Entrada</text>
+                                <text x="130" y="12" font-size="5" text-anchor="middle">Salida</text>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="combined-item">
+                        <h4>Relevador</h4>
+                        <svg class="combined-svg" viewBox="0 0 250 80" role="img" aria-label="Relevador croquis">
+                            <g transform="translate(15,15)">
+                                <!-- coil -->
+                                <rect x="0" y="12" width="55" height="35" fill="#fff" stroke="#2d3748" rx="2"/>
+                                <text x="27.5" y="25" font-size="6" text-anchor="middle">Bobina</text>
+                                <path d="M12 25 q8 -5 30 0" fill="none" stroke="#111" stroke-width="1.2"/>
+                                <!-- contacts -->
+                                <rect x="70" y="8" width="70" height="18" fill="#fff" stroke="#111"/>
+                                <text x="105" y="18" font-size="6" text-anchor="middle">NO</text>
+                                <rect x="70" y="33" width="70" height="18" fill="#fff" stroke="#111"/>
+                                <text x="105" y="43" font-size="6" text-anchor="middle">NC</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </section>
 
         <div class="footer-section">
             <h2>Comentarios</h2>
-            <textarea class="comment-box" placeholder="Escriba aquí cualquier observación o comentario adicional sobre el mantenimiento..."></textarea>
+            <textarea class="comment-box" placeholder="Observaciones adicionales sobre el mantenimiento..."></textarea>
+        </div>
 
-            <div class="signature-section">
-                <div class="signature-block">
-                    <p>Firma del cofer de la unidad:</p>
-                    <div class="signature-line"></div>
-                </div>
-                <div class="signature-block">
-                    <p>Firma del técnico:</p>
-                    <div class="signature-line"></div>
-                </div>
+        <!-- APARTADO: Revisión General (AHORA DESPUÉS DE COMENTARIOS) -->
+        <section class="seccion" style="margin-top:10px; padding:6px; border:1px solid #e1e6ef; border-radius:4px;">
+            <label style="margin-bottom:6px; display:block; font-weight:600; font-size: 12px;">Revisión General</label>
+
+            <div class="campo">
+                <span>¿Se revisó la tubería?</span>
+                <input type="checkbox" id="rev_tuberia">
+            </div>
+
+            <div class="campo">
+                <span>¿Se revisó la impresora?</span>
+                <input type="checkbox" id="rev_impresora">
+            </div>
+
+            <div class="campo">
+                <span>¿se liquido la unidad?</span>
+                <input type="checkbox" id="se_liquido">
+            </div>
+
+            <div class="campo">
+                <span>¿Se le realizó rotación?</span>
+                <input type="checkbox" id="se_rotacion">
+            </div>
+
+            <div class="campo">
+                <span>reporte de jornada:</span>
+                <input type="text" id="num_rotacion">
+            </div>
+        </section>
+
+        <!-- FIRMAS (AHORA AL FINAL) -->
+        <div class="signature-section">
+            <div class="signature-block">
+                <p>Firma del cofer de la unidad:</p>
+                <div class="signature-line"></div>
+            </div>
+            <div class="signature-block">
+                <p>Firma del técnico:</p>
+                <div class="signature-line"></div>
             </div>
         </div>
 
@@ -407,6 +608,7 @@
             <button id="printBtn">Imprimir</button>
             <button class="secondary" id="resetBtn">Limpiar</button>
         </div>
+
     </div>
 
     <script>
@@ -441,6 +643,13 @@
             document.getElementById('unidad').value = '';
             document.getElementById('tecnico').value = '';
             document.querySelector('.comment-box').value = '';
+
+            // limpiar checkboxes y rotación
+            document.getElementById('rev_tuberia').checked = false;
+            document.getElementById('rev_impresora').checked = false;
+            document.getElementById('se_liquido').checked = false;
+            document.getElementById('se_rotacion').checked = false;
+            document.getElementById('num_rotacion').value = '';
         });
 
         document.getElementById('fillExample').addEventListener('click', () => {
@@ -452,6 +661,12 @@
             document.getElementById('unidad').value = 'GR-00123';
             document.getElementById('tecnico').value = 'Nombre Técnico Ejemplo';
             document.querySelector('.comment-box').value = 'Mantenimiento preventivo realizado según protocolo establecido. Se revisaron todos los componentes eléctricos y se reemplazaron fusibles desgastados.';
+            // ejemplo de revisión
+            document.getElementById('rev_tuberia').checked = true;
+            document.getElementById('rev_impresora').checked = true;
+            document.getElementById('se_liquido').checked = false;
+            document.getElementById('se_rotacion').checked = true;
+            document.getElementById('num_rotacion').value = '001';
         });
     </script>
 </body>
