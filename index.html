@@ -570,6 +570,12 @@
                 <span>reporte de jornada:</span>
                 <input type="text" id="num_rotacion">
             </div>
+
+            <!-- NUEVA PREGUNTA AÑADIDA -->
+            <div class="campo">
+                <span>NO. marchamos:</span>
+                <input type="text" id="no_marchamos" placeholder="________________">
+            </div>
         </section>
 
         <!-- FIRMAS (AHORA AL FINAL) -->
@@ -625,12 +631,13 @@
             document.getElementById('tecnico').value = '';
             document.querySelector('.comment-box').value = '';
 
-            // limpiar checkboxes y rotación
+            // limpiar checkboxes y campos de texto
             document.getElementById('rev_tuberia').checked = false;
             document.getElementById('rev_impresora').checked = false;
             document.getElementById('se_liquido').checked = false;
             document.getElementById('se_rotacion').checked = false;
             document.getElementById('num_rotacion').value = '';
+            document.getElementById('no_marchamos').value = ''; // Limpiar el nuevo campo
         });
 
         document.getElementById('fillExample').addEventListener('click', () => {
@@ -648,6 +655,7 @@
             document.getElementById('se_liquido').checked = false;
             document.getElementById('se_rotacion').checked = true;
             document.getElementById('num_rotacion').value = '001';
+            document.getElementById('no_marchamos').value = '12345'; // Ejemplo para el nuevo campo
         });
     </script>
 </body>
