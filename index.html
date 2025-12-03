@@ -630,10 +630,20 @@
                 <input type="text" id="num_rotacion">
             </div>
 
-            <!-- NUEVA PREGUNTA AÑADIDA -->
+            <!-- NUEVA SECCIÓN PARA MARCHAMOS (3 CAMPOS) -->
             <div class="campo">
-                <span>NO. marchamos:</span>
-                <input type="text" id="no_marchamos" placeholder="________________">
+                <span>NO. marchamos 1:</span>
+                <input type="text" id="no_marchamos1" placeholder="________________">
+            </div>
+            
+            <div class="campo">
+                <span>NO. marchamos 2:</span>
+                <input type="text" id="no_marchamos2" placeholder="________________">
+            </div>
+            
+            <div class="campo">
+                <span>NO. marchamos 3:</span>
+                <input type="text" id="no_marchamos3" placeholder="________________">
             </div>
         </section>
 
@@ -696,7 +706,11 @@
             document.getElementById('se_liquido').checked = false;
             document.getElementById('se_rotacion').checked = false;
             document.getElementById('num_rotacion').value = '';
-            document.getElementById('no_marchamos').value = ''; // Limpiar el nuevo campo
+            
+            // Limpiar los 3 campos de marchamos
+            document.getElementById('no_marchamos1').value = '';
+            document.getElementById('no_marchamos2').value = '';
+            document.getElementById('no_marchamos3').value = '';
         });
 
         document.getElementById('fillExample').addEventListener('click', () => {
@@ -714,7 +728,11 @@
             document.getElementById('se_liquido').checked = false;
             document.getElementById('se_rotacion').checked = true;
             document.getElementById('num_rotacion').value = '001';
-            document.getElementById('no_marchamos').value = '12345'; // Ejemplo para el nuevo campo
+            
+            // Ejemplo para los 3 campos de marchamos
+            document.getElementById('no_marchamos1').value = '12345';
+            document.getElementById('no_marchamos2').value = '67890';
+            document.getElementById('no_marchamos3').value = '54321';
         });
     </script>
 </body>
